@@ -1,0 +1,122 @@
+html {
+    height: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+    /*font-size: 100px;*/
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    border: 0;
+    font-family: "PingFang-SC-Regular", "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-size: .12rem;
+    background-color: #fafafa;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+i, em {
+    font-style: normal;
+}
+
+button, textarea, input {
+    border: 0;
+    outline: none;
+    font-family: "PingFang-SC-Regular", "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+}
+
+textarea {
+    resize: none;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.ellipsis-1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ellipsis-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+
+
+
+
