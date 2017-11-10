@@ -5,6 +5,8 @@ import { count } from "./reducers";
 const reducer = combineReducers({
 	// 这是整个 state 树中的 属性
 	counter:count,
+    isAuthLoaded: true,
+    loadAuth: true
 });
 
 export default reducer;
