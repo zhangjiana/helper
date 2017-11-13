@@ -1,10 +1,10 @@
 /**
  * Created by Administrator on 2017/11/9.
  */
-import React, {Component} from "react";
-import {Router, Route, Link, browserHistory, IndexRoute} from "react-router";
-import {Provider} from "react-redux";
-import store from "./store";
+import React, {Component} from 'react';
+import {Router, Route, Link, browserHistory, IndexRoute} from 'react-router';
+import {Provider} from 'react-redux';
+import store from './store';
 import {
     App,
     Counter,
@@ -14,15 +14,15 @@ import {
     Login,
     NotFound,
     Index
-} from "views/index"
+} from 'views/index';
 
 // need Login
 const requireLogin = (nextState, replace, cb) => {
     console.log(nextState);
     console.log(replace);
     console.log(cb);
-    cb()
-    /*function checkAuth() {
+    cb();
+    /* function checkAuth() {
      const {auth: {user}} = store.getState();
      if (!user) {
      // oops, not logged in, so can't be here!
@@ -35,7 +35,7 @@ const requireLogin = (nextState, replace, cb) => {
      store.dispatch(loadAuth()).then(checkAuth);
      } else {
      checkAuth();
-     }*/
+     } */
 };
 
 export default class ROOT extends Component {

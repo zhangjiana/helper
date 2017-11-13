@@ -1,11 +1,11 @@
-import React, {Component} from "react";
-import classNames from "classnames";
-import style from "./style.scss";
+import React, {Component} from 'react';
+import classNames from 'classnames';
+import style from './style.scss';
 
 export default class Welcome extends Component {
     render() {
         const classnames = classNames({
-            [style.box]: true,
+            [style.box]: true
         });
 
         return (
@@ -16,7 +16,6 @@ export default class Welcome extends Component {
                 <div>D</div>
                 <div>E</div>
             </div>
-        )
+        );
     }
 }
-

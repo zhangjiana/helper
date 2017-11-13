@@ -1,11 +1,10 @@
 /**
  * Created by Administrator on 2017/11/9.
  */
-import React, {Component} from "react";
-import {Link} from "react-router";
-import { browserHistory } from 'react-router'
+import React, {Component} from 'react';
+import {Link, browserHistory} from 'react-router';
 function toLogin() {
-    browserHistory.push('/login')
+    browserHistory.push('/login');
 }
 // 组件内跳转
 // this.context.router.push(path)
@@ -27,6 +26,6 @@ export default class Index extends Component {
                 </ul>
                 {this.props.children}
             </div>
-        )
+        );
     }
 }

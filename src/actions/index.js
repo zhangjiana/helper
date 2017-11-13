@@ -1,5 +1,5 @@
-import COUNTER_ACTIONS from "./allActions/counterAction";
+import COUNTER_ACTIONS from './allActions/counterAction';
 
-export{
-	COUNTER_ACTIONS,
-}
+export {
+    COUNTER_ACTIONS
+};

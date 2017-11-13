@@ -19,20 +19,23 @@ module.exports = function(env){
             modules: [path.join(__dirname, "../src"), "node_modules"]
         },
         module:{
-			loaders:[
+			rules:[
 				{
 					test:/\.jsx?$/,
 					use:["babel-loader"],
 					exclude:"/node_modules/"
 				},
                 {
-                    test: /\.js[x]?$/,
+                    test: /\.js?$/,
                     enforce: 'pre',
                     use: [{
                         loader: 'eslint-loader',
-                        options: { fix: true }
+                        options: {
+                        	fix: true,
+                            formatter: require('eslint-friendly-formatter')
+                        }
                     }],
-                    include: path.resolve(__dirname, './src/**/*.js'),
+                    include: path.resolve(__dirname, '../src/'),
                     exclude: /node_modules/
                 },
 				{ 

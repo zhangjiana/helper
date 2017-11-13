@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2017/10/9.
  */
-import React, {Component} from "react";
+import React, {Component} from 'react';
 
 function BoilingVerdict(props) {
     if (props.celsius >= 100) {
@@ -28,7 +28,7 @@ function tryConvert(temperature, convert) {
 const scaleNames = {
     c: 'Celsius',
     f: 'Fahrenheit'
-}
+};
 class TemperatureInput extends Component {
     constructor(props) {
         super(props);
@@ -37,7 +37,7 @@ class TemperatureInput extends Component {
     }
 
     handleChange(e) {
-        this.props.onTemperatureChange(e.target.value)
+        this.props.onTemperatureChange(e.target.value);
     }
 
     render() {
@@ -47,9 +47,9 @@ class TemperatureInput extends Component {
             <fieldset>
                 <legend>Enter temperature in {scaleNames[scale]} :</legend>
                 <input value={temperature} onChange={this.handleChange}/>
-                {/*<BoilingVerdict celsius={parseFloat(temperature)}/>*/}
+                {/* <BoilingVerdict celsius={parseFloat(temperature)}/> */}
             </fieldset>
-        )
+        );
     }
 }
 
@@ -62,7 +62,7 @@ export default class Calculator extends Component {
     }
 
     componentDidMount() {
-        console.log(this.props.query.type)
+        console.log(this.props.query.type);
     }
 
     handleCelsiusChange(e) {

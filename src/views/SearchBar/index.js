@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2017/10/11.
  */
-import React, {Component} from "react";
+import React, {Component} from 'react';
 
 class SearchInput extends Component {
     constructor(props) {
@@ -22,35 +22,35 @@ class SearchInput extends Component {
         return (
             <div>
                 <input type="text" placeholder="Search..."
-                       value={this.props.filterText}
-                       onChange={this.handleInput}
+                    value={this.props.filterText}
+                    onChange={this.handleInput}
                 />
                 <p>
                     <input type="checkbox" checked={this.props.inStockOnly}
-                           onChange={this.handleCheckbox}
+                        onChange={this.handleCheckbox}
                     />
                     Only show products in stock
                 </p>
             </div>
-        )
+        );
     }
 }
 class ProductCategoryRow extends Component {
     render() {
         return <tr>
             <th colSpan='2'>{this.props.category}</th>
-        </tr>
+        </tr>;
     }
 }
 class ProductRow extends Component {
     render() {
-        var name = this.props.product.stocked ? this.props.product.name :
-            <span style={{color: 'red'}}> {this.props.product.name}</span>;
+        var name = this.props.product.stocked ? this.props.product.name
+            : <span style={{color: 'red'}}> {this.props.product.name}</span>;
 
         return (<tr>
             <td>{name}</td>
             <td>{this.props.product.price}</td>
-        </tr>)
+        </tr>);
     }
 }
 
@@ -63,7 +63,7 @@ class ProductTable extends Component {
                 return;
             }
             if (product.category !== lastCategory) {
-                rows.push(<ProductCategoryRow category={product.category} key={product.category}/>)
+                rows.push(<ProductCategoryRow category={product.category} key={product.category}/>);
             }
             rows.push(<ProductRow product={product} key={product.name}/>);
             lastCategory = product.category;
@@ -71,16 +71,16 @@ class ProductTable extends Component {
         return (
             <table>
                 <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
                 </thead>
                 <tbody>
-                {rows}
+                    {rows}
                 </tbody>
             </table>
-        )
+        );
     }
 }
 var PRODUCTS = [
@@ -99,23 +99,23 @@ export default class SearchBar extends Component {
         this.state = {
             filterText: '',
             inStockOnly: false
-        }
+        };
     }
 
     componentDidMount() {
-        console.log(this.props.params.id)
+        console.log(this.props.params.id);
     }
 
     handleInput(value) {
         this.setState({
             filterText: value
-        })
+        });
     }
 
     handleCheckBox(value) {
         this.setState({
             inStockOnly: value
-        })
+        });
     }
 
     render() {
@@ -128,10 +128,10 @@ export default class SearchBar extends Component {
                     handleCheckBox={this.handleCheckBox}
                 />
                 <ProductTable products={PRODUCTS}
-                              filterText={this.state.filterText}
-                              inStockOnly={this.state.inStockOnly}
+                    filterText={this.state.filterText}
+                    inStockOnly={this.state.inStockOnly}
                 />
             </div>
-        )
+        );
     }
 }

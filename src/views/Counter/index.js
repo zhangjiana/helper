@@ -1,36 +1,36 @@
-import {connect} from "react-redux";
+import {connect} from 'react-redux';
 // import UI component
-import UI_Counter from "./Counter";
+import UI_Counter from './Counter';
 // import actions
-import {COUNTER_ACTIONS} from "../../actions/index";
+import {COUNTER_ACTIONS} from '../../actions/index';
 
 // mapStateToProps goes here
 function mapStateToProps(state) {
     return {
         value: state.counter.value
-    }
+    };
 }
 
 // mapDispatchToProps goes here
 function mapDispatchToProps(dispatch) {
     return {
-        increase(){
-            dispatch(COUNTER_ACTIONS.increase())
+        increase() {
+            dispatch(COUNTER_ACTIONS.increase());
         },
-        decrease(){
-            dispatch(COUNTER_ACTIONS.decrease())
+        decrease() {
+            dispatch(COUNTER_ACTIONS.decrease());
         },
         // async dispatch
-        increase_async(){
-            dispatch(COUNTER_ACTIONS.increase_async())
+        increase_async() {
+            dispatch(COUNTER_ACTIONS.increase_async());
         }
-    }
+    };
 }
 
 // build container-component
 const Counter = connect(
     mapStateToProps,
-    mapDispatchToProps,
+    mapDispatchToProps
 )(UI_Counter);
 
 export default Counter;
