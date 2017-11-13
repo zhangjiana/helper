@@ -3,10 +3,17 @@
   .icon-close {
     color: #ccc;
   }
-  .goRegister {
+  .go-register {
     margin-top: .1rem;
     text-align: right;
     font-size: .15rem;
+    clear: both;
+    overflow: hidden;
+    span{
+      height: .15rem;
+      display: inline-block;
+      font-size: .14rem;
+    }
   }
   .logo-box {
     margin: .2rem auto;

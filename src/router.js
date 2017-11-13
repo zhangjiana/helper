@@ -18,11 +18,10 @@ import {
 
 // need Login
 const requireLogin = (nextState, replace, cb) => {
-    if (sessionStorage.getItem('user')) {
-        return true
-    } else {
-        return false
-    }
+    console.log(nextState);
+    console.log(replace);
+    console.log(cb);
+    cb()
     /*function checkAuth() {
      const {auth: {user}} = store.getState();
      if (!user) {
@@ -59,7 +58,7 @@ export default class ROOT extends Component {
 
                         <Route path="calculator" component={ Calculator }></Route>
                         <Route path="searchBar/:id" component={ SearchBar }></Route>
-                        <Route path="login" component={ Login }></Route>
+                        <Route onEnter={requireLogin} path="login" component={ Login }></Route>
 
                         { /* Catch all route */ }
                         <Route path="*" component={NotFound}/>

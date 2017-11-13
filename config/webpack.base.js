@@ -25,6 +25,16 @@ module.exports = function(env){
 					use:["babel-loader"],
 					exclude:"/node_modules/"
 				},
+                {
+                    test: /\.js[x]?$/,
+                    enforce: 'pre',
+                    use: [{
+                        loader: 'eslint-loader',
+                        options: { fix: true }
+                    }],
+                    include: path.resolve(__dirname, './src/**/*.js'),
+                    exclude: /node_modules/
+                },
 				{ 
 					test: /\.(png|jpg|gif)$/, 
 					use: ["url-loader?limit=20000&name=images/[hash:16].[ext]"], 

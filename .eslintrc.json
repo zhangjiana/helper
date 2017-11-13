@@ -1,5 +1,5 @@
 {
-  //文件名 .eslintrc.json
+  //文件名 .eslintrc.json.json
   "env": {
     "browser": true,
     "es6": true,

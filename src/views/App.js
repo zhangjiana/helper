@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {Link} from "react-router";
 import store from "../store";
 import {Index} from '../views/index'
-const user = false
+const user =false
 export default class App extends Component {
     render() {
 
